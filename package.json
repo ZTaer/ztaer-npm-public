@@ -1,0 +1,56 @@
+{
+    "name": "ztaer-npm-public",
+    "version": "1.0.1",
+    "description": "npm public test",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "keywords": [
+        "react",
+        "react-component",
+        "ztaer",
+        "rollup"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ZTaer",
+        "directory": "npm public test"
+    },
+    "homepage": "https://github.com/ZTaer",
+    "author": "Ztaer",
+    "private": false,
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "@types/react": "^16.8.6 || ^17.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@types/react": {
+            "optional": true
+        }
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.17.2",
+        "@babel/preset-react": "^7.16.7",
+        "@rollup/plugin-node-resolve": "^13.1.3",
+        "@storybook/addon-actions": "^6.4.18",
+        "@storybook/addon-essentials": "^6.4.18",
+        "@storybook/addon-links": "^6.4.18",
+        "@storybook/react": "^6.4.18",
+        "babel-loader": "^8.2.3",
+        "rollup": "^2.67.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "scripts": {
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "build-lib": "rollup -c"
+    },
+    "engines": {
+        "node": ">=12.0.0"
+    }
+}
