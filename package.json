@@ -1,6 +1,6 @@
 {
     "name": "ztaer-npm-public",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "npm public react component test",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
