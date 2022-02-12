@@ -1,7 +1,7 @@
 {
     "name": "ztaer-npm-public",
     "version": "1.0.1",
-    "description": "npm public test",
+    "description": "npm public react component test",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "keywords": [
@@ -12,8 +12,8 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/ZTaer",
-        "directory": "npm public test"
+        "url": "https://github.com/ZTaer/ztaer-npm-public",
+        "directory": "npm public react component test"
     },
     "homepage": "https://github.com/ZTaer",
     "author": "Ztaer",
