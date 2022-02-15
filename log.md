@@ -22,7 +22,7 @@
     h) 18:45 - 配置: rollup.config.js
     i) 19:23 - 配置: package.json, 启动rollup
     j) 20:09 - 修正: 使css编译正常的配置
-        0. 安装: yarn add rollup-plugin-postcss -D
+        0. 安装: yarn add rollup-plugin-postcss postcss -D
     k) 21:10 - 优化: 压缩打包文件
         0. 安装: yarn add rollup-plugin-terser -D
     l) 22:19 - 准备发布到npm,确保npm项目名称唯一
@@ -38,4 +38,6 @@
     p) 23:29 - 检测发布结果
 
 
-# 2 实验
+# 2 优化脚手架
+    a) .npmignore - 决定哪些文件发布到npm
+        0. 用法: 与.gitignore类似

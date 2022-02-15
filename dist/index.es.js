@@ -1,11 +1,1 @@
-import React from 'react';
-
-const HelloWord = () => {
-  return /*#__PURE__*/React.createElement("h1", null, "Hello Word");
-};
-
-const TwoH1 = () => {
-  return /*#__PURE__*/React.createElement("h1", null, "TwoH1");
-};
-
-export { HelloWord, TwoH1 };
+import e from"react";const l=()=>e.createElement("h1",null,"Hello Word"),t=()=>e.createElement("h1",null,"TwoH1");export{l as HelloWord,t as TwoH1};
