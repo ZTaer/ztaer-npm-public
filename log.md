@@ -1,5 +1,6 @@
 # 1 初步探索npm发布脚手架
     a) 00:00 - 参考视频: https://www.youtube.com/watch?v=hf6Z8OZanec&list=PLfVTUjGXQIdWD0v5ZsieLpqf5qVfn2O1H&index=7&t=1132s
+        0. 参考脚手架: https://github.com/mui/material-ui/tree/master/packages/mui-material
     b) 2:59 - peerDependencies,要求安装的组件
     c) 3:57 - storybook,组件库生成文档第三方库推荐
         0. 官方: https://storybook.js.org/

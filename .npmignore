@@ -1,0 +1,5 @@
+.storybook/*
+src/*
+log.md
+rollup.config.js
+yarn.lock
