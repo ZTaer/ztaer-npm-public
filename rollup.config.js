@@ -12,7 +12,7 @@ import postcss from "rollup-plugin-postcss";
  *              1. rollup-plugin-babel - 配合babel相关编译
  *              2. @rollup/plugin-node-resolve - 第三方依赖库相关
  *              3. rollup-plugin-peer-deps-external - 排除第三方依赖库打包相关( 如react,react-dom,防止引入库使用时产生冲突 )
- *      1. 使css编译正常: yarn add rollup-plugin-postcss postcss -D
+ *      1. 使css编译正常( 等待修正 ): yarn add rollup-plugin-postcss postcss -D
  *          a) 作用解析:
  *              0. rollup-plugin-postcss - 使css编译正常
  *              1. postcss - 保证插件运行正常

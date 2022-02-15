@@ -41,3 +41,7 @@
 # 2 优化脚手架
     a) .npmignore - 决定哪些文件发布到npm
         0. 用法: 与.gitignore类似
+    b) css/scss - 正常使用
+    c) typescript - 正常使用
+    d) eslint - 正常使用
+    e) husky + lint-staged - 保证git保存时进行校验代码
