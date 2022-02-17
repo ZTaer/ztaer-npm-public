@@ -39,9 +39,18 @@
 
 
 # 2 优化脚手架
-    a) .npmignore - 决定哪些文件发布到npm
+    a) 参考项目:
+        0. 文档: https://www.codefeetime.com/post/rollup-config-for-react-component-library-with-typescript-scss/
+        1. Github: https://github.com/ZTaer/codefee-kit
+    b) .npmignore - 决定哪些文件发布到npm
         0. 用法: 与.gitignore类似
-    b) css/scss - 正常使用
-    c) typescript - 正常使用
-    d) eslint - 正常使用
-    e) husky + lint-staged - 保证git保存时进行校验代码
+    c) css/scss - 正常使用
+    d) typescript - 正常使用
+        0. 基本安装: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
+        1. 配置rollup.config.js
+    e) eslint - 正常使用
+        0. 基本安装: yarn add eslint eslint-config-airbnb eslint-loader eslint-plugin-import eslint-plugin-jsx-a11y -D
+        1. 兼容react安装: yarn add eslint-plugin-react eslint-plugin-react-hooks -D
+        1. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
+        2. 兼容storybook安装: yarn add eslint-plugin-storybook -D
+    f) husky + lint-staged - 保证git保存时进行校验代码

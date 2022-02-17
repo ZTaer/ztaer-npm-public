@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import external from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
+import typescript from "@rollup/plugin-typescript";
 
 /**
  * rollup主要配置( 等待笔记 )
@@ -19,10 +20,12 @@ import postcss from "rollup-plugin-postcss";
  *      2. 压缩打包文件: yarn add rollup-plugin-terser -D
  *          a) 作用解析:
  *              0. rollup-plugin-terser - 压缩打包文件
+ *      3. typeScirpt: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
+ *          a) 作用解析: 使ts正常
  */
 export default [
     {
-        input: "./src/index.js",
+        input: ["./src/index.js"],
         output: [
             {
                 file: "dist/index.js",
@@ -46,6 +49,12 @@ export default [
                 plugins: [],
                 minimize: true,
             }),
+            typescript({
+                tsconfig: "./tsconfig.build.json",
+                declaration: true,
+                declarationDir: "dist",
+            }),
         ],
+        external: ["react", "react-dom"],
     },
 ];
