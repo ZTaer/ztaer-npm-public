@@ -11,3 +11,5 @@ function main() {
 }
 
 main();
+
+console.log('TEST-START')

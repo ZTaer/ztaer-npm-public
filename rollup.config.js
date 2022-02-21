@@ -4,6 +4,7 @@ import external from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import typescript from "@rollup/plugin-typescript";
+import commonjs from "@rollup/plugin-commonjs";
 
 /**
  * rollup主要配置( 等待笔记 )
@@ -23,20 +24,51 @@ import typescript from "@rollup/plugin-typescript";
  *      3. typeScirpt: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
  *          a) 作用解析: 使ts正常
  */
+
+/**
+ * rollup属性解析( 等待笔记 )
+ *      0. outpu: 编译输出配置
+ *          a) 压缩成单个文件编译输出
+ *              <p>
+                    {
+                       output: [
+                            {
+                                file: "dist/index.js",
+                                format: "cjs",
+                            },
+                            {
+                                file: "dist/index.es.js",
+                                format: "es",
+                                exports: "named",
+                            },
+                        ]
+                    }
+ *              </p>
+ *          b) 有文件结构的编译输出
+ *              <p>
+                    {
+                      output: {
+                            dir: "dist",
+                            format: "cjs",
+                            preserveModules: true,
+                            preserveModulesRoot: "src",
+                            sourcemap: true,
+                        },
+                    }
+ *              </p>
+ */
+
 export default [
     {
-        input: ["./src/index.js"],
-        output: [
-            {
-                file: "dist/index.js",
-                format: "cjs",
-            },
-            {
-                file: "dist/index.es.js",
-                format: "es",
-                exports: "named",
-            },
-        ],
+        input: ["./src/index.ts"],
+        output: {
+            dir: "dist",
+            format: "es",
+            sourcemap: true,
+            name: "ZTaer",
+            preserveModules: true,
+            preserveModulesRoot: "src",
+        },
         plugins: [
             babel({
                 exclude: "node_modules/**",
@@ -44,10 +76,14 @@ export default [
             }),
             external(),
             resolve(),
+            commonjs({
+                defaultIsModuleExports: "auto",
+            }),
             terser(),
             postcss({
                 plugins: [],
                 minimize: true,
+                extract: true, // true时css文件单独打包( false时css会在js文件中 )
             }),
             typescript({
                 tsconfig: "./tsconfig.build.json",

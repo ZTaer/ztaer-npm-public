@@ -13,12 +13,13 @@
     f) 14:03 - rollup.js为打包工具,代替webpack
         0. 原因: rollup配置更为简便,很多成熟的项目都在使用,如materil-ui
     g) 15:02 - 安装rollup相关
-        0. 安装: yarn add rollup rollup-plugin-babel @rollup/plugin-node-resolve rollup-plugin-peer-deps-external @babel/preset-react -D
+        0. 安装: yarn add rollup rollup-plugin-babel @rollup/plugin-node-resolve @rollup/plugin-commonjs rollup-plugin-peer-deps-external @babel/preset-react -D
             a) 作用解析:
                 0. rollup
                 1. rollup-plugin-babel - 配合babel相关编译
                 2. @rollup/plugin-node-resolve - 第三方依赖库相关
                 3. rollup-plugin-peer-deps-external - 排除第三方依赖库打包相关( 如react,react-dom,防止引入库使用时产生冲突 )
+                4. @rollup/plugin-commonjs - 配合resolve
     h) 18:45 - 配置: rollup.config.js
     i) 19:23 - 配置: package.json, 启动rollup
     j) 20:09 - 修正: 使css编译正常的配置
@@ -45,6 +46,7 @@
     b) .npmignore - 决定哪些文件发布到npm
         0. 用法: 与.gitignore类似
     c) css/scss - 正常使用
+        0. 基本安装: yarn add css-loader postcss rollup-plugin-postcss -D
     d) typescript - 正常使用
         0. 基本安装: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
         1. 配置rollup.config.js
