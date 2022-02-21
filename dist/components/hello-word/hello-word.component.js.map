@@ -1,1 +1,1 @@
-{"version":3,"file":"hello-word.component.js","sources":["../../../src/components/hello-word/hello-word.component.tsx"],"sourcesContent":[null],"names":["HelloWord","React"],"mappings":"yBAEMA,EAAY,WACd,OAAOC"}
+{"version":3,"file":"hello-word.component.js","sources":["../../../src/components/hello-word/hello-word.component.tsx"],"sourcesContent":[null],"names":["HelloWord","React","HelloWordOther"],"mappings":"wEAGMA,EAAY,WACd,OACIC,2BACIA,wCACAA,gBAACC"}

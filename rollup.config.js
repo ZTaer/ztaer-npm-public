@@ -63,7 +63,7 @@ export default [
         input: ["./src/index.ts"],
         output: {
             dir: "dist",
-            format: "es",
+            format: "es", // 适合node.js --> cjs, 适合webpack --> es
             sourcemap: true,
             name: "ZTaer",
             preserveModules: true,
