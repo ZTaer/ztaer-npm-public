@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./index.scss";
 
 const TwoH1 = () => {
     return <h1 className="two-h1">TwoH1</h1>;

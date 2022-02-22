@@ -2,9 +2,10 @@ import babel from "rollup-plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import external from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
-import postcss from "rollup-plugin-postcss";
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
+import scss from "rollup-plugin-scss";
+import sass from "sass";
 
 /**
  * rollup主要配置( 等待笔记 )
@@ -61,14 +62,16 @@ import commonjs from "@rollup/plugin-commonjs";
 export default [
     {
         input: ["./src/index.ts"],
-        output: {
-            dir: "dist",
-            format: "es", // 适合node.js --> cjs, 适合webpack --> es
-            sourcemap: true,
-            name: "ZTaer",
-            preserveModules: true,
-            preserveModulesRoot: "src",
-        },
+        output: [
+            {
+                file: "dist/index.js",
+                format: "cjs",
+            },
+            {
+                file: "dist/index.es.js",
+                format: "es",
+            },
+        ],
         plugins: [
             babel({
                 exclude: "node_modules/**",
@@ -80,10 +83,11 @@ export default [
                 defaultIsModuleExports: "auto",
             }),
             terser(),
-            postcss({
-                plugins: [],
-                minimize: true,
-                extract: true, // true时css文件单独打包( false时css会在js文件中 )
+            scss({
+                exclude: ["node_modules/**", "dist/**"],
+                failOnError: true,
+                runtime: sass,
+                sourceMap: true,
             }),
             typescript({
                 tsconfig: "./tsconfig.build.json",

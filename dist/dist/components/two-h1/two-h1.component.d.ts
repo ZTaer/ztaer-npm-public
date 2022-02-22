@@ -1,4 +1,4 @@
 /// <reference types="react" />
-import "./index.css";
+import "./index.scss";
 declare const TwoH1: () => JSX.Element;
 export default TwoH1;

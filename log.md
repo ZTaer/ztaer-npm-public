@@ -1,4 +1,16 @@
-# 1 初步探索npm发布脚手架
+<pre>
+# TODO: 实验记录目录:
+    0. 2022.02.22
+        a) Rollup 初步探索npm发布脚手架 - 实验一 ( 实验成功 )
+    1. 2022.02.23
+        a) Rollup 优化脚手架 - 实验二 ( 实验中... )
+        b) Rollup 文件结构优化 - 实验三 
+    2. 2022.02.24
+        a) Rollup 搭建Npm发布脚手架汇总
+</pre>
+
+<pre>
+# TODO: 2022.02.22 | Rollup 初步探索npm发布脚手架 - 实验一 ( 实验成功 ) 
     a) 00:00 - 参考视频: https://www.youtube.com/watch?v=hf6Z8OZanec&list=PLfVTUjGXQIdWD0v5ZsieLpqf5qVfn2O1H&index=7&t=1132s
         0. 参考脚手架: https://github.com/mui/material-ui/tree/master/packages/mui-material
     b) 2:59 - peerDependencies,要求安装的组件
@@ -37,9 +49,12 @@
         1. 目的: 保证输出文件,是编译打包后的, 
     o) 23:04 - npm publish 发布包
     p) 23:29 - 检测发布结果
+</pre>
 
 
-# 2 优化脚手架
+
+<pre>
+# TODO: 2022.02.22 | Rollup 优化脚手架 - 实验二 ( 实验中... )
     a) 参考项目:
         0. 文档: https://www.codefeetime.com/post/rollup-config-for-react-component-library-with-typescript-scss/
         1. Github: https://github.com/ZTaer/codefee-kit
@@ -47,12 +62,17 @@
         0. 用法: 与.gitignore类似
     c) css/scss - 正常使用
         0. 基本安装: yarn add css-loader postcss rollup-plugin-postcss -D
+        1. scss安装: yarn add rollup-plugin-scss sass
+        2. 兼容storybook使用scss: yarn add -D @storybook/preset-scss css-loader@5.2.6 sass sass-loader@10.1.1 style-loader@2.0.0
+            a) 需配置: /.storybook/main.js
+            b) 需配置: rollup.config.js
     d) typescript - 正常使用
         0. 基本安装: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
-        1. 配置rollup.config.js
+        1. 需配置: rollup.config.js
     e) eslint - 正常使用
         0. 基本安装: yarn add eslint eslint-config-airbnb eslint-loader eslint-plugin-import eslint-plugin-jsx-a11y -D
         1. 兼容react安装: yarn add eslint-plugin-react eslint-plugin-react-hooks -D
         2. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
         3. 兼容storybook安装: yarn add eslint-plugin-storybook -D
     f) husky + lint-staged - 保证git保存时进行校验代码
+</pre>

@@ -1,1 +1,8 @@
-.two-h1{color:red}
+.two-h1 {
+  color: red;
+}
+.two-h1 .h1 {
+  font-size: 5rem;
+}
+
+/*# sourceMappingURL=index.css.map */
