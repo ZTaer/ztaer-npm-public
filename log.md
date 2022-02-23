@@ -77,6 +77,28 @@
         0. 多文件输出: 要考虑ts编译输出,如index.d.ts
         1. 单文件输出: 无需考虑ts编译输出
         2. css文件要单独抽离
+        3. 注意: 生成文件夹相关 
+            a) "dist": 单文件输出
+            b) "lib": 多文件输出
+    h) package.json配置项相关
+        0. main: 指定cjs单核心文件 -> "dist/index.js"
+        1. module: 指定es多核心文件 -> "lib/index.js"
+        2. typings: 包含组件类型: -> "lib/index.d.ts",
+        4. unpkg: ( 等待补充 ) "dist/index.js",
+        <p>
+        {
+            "main": "dist/index.js",
+            "module": "lib/index.js",
+            "unpkg": "dist/index.js",
+            "typings": "lib/index.d.ts",
+            "outputDir": "./dist",
+            "files": [
+                "dist",
+                "lib"
+            ],
+
+        }
+        <p>
 
 </pre>
 
