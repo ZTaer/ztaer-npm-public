@@ -73,6 +73,11 @@
         2. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
         3. 兼容storybook安装: yarn add eslint-plugin-storybook -D
     f) husky + lint-staged - 保证git保存时进行校验代码
+    g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
+        0. 多文件输出: 要考虑ts编译输出,如index.d.ts
+        1. 单文件输出: 无需考虑ts编译输出
+        2. css文件要单独抽离
+
 </pre>
 
 <pre>
