@@ -3,11 +3,13 @@
     "version": "1.0.8",
     "description": "npm public react component test",
     "main": "dist/index.js",
-    "module": "lib/index.es.js",
+    "module": "lib/index.js",
+    "unpkg": "dist/index.js",
+    "typings": "lib/index.d.ts",
     "outputDir": "./dist",
     "files": [
         "dist",
-        "README.md"
+        "lib"
     ],
     "keywords": [
         "react",
