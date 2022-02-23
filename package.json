@@ -3,7 +3,7 @@
     "version": "1.0.8",
     "description": "npm public react component test",
     "main": "dist/index.js",
-    "module": "dist/index.es.js",
+    "module": "lib/index.es.js",
     "outputDir": "./dist",
     "files": [
         "dist",
