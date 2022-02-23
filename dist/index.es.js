@@ -1,1 +1,2 @@
-import e from"react";var t=function(){return e.createElement("div",null,"HelloWordOther")},l=function(){return e.createElement("div",null,e.createElement("h1",null,"Hello Word"),e.createElement(t,null))},n=function(){return e.createElement("h1",{className:"two-h1"},"TwoH1")},r=function(t){var l=t.value,n=void 0===l?"TSH1":l;return e.createElement("div",null,e.createElement("h1",null,n))};export{l as HelloWord,r as TsH1,n as TwoH1};
+import e from"react";var l=function(){return e.createElement("div",null,"HelloWordOther")},r=function(r){var t=r.value,n=void 0===t?"HelloWord":t;return e.createElement("div",{className:"hello-word"},e.createElement("h1",null,n),e.createElement(l,null))};export{r as HelloWord};
+//# sourceMappingURL=index.es.js.map

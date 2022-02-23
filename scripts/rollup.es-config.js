@@ -6,7 +6,6 @@ import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import scss from "rollup-plugin-scss";
 import sass from "sass";
-import { format } from "upath";
 
 /**
  * rollup主要配置( 等待笔记 )
@@ -62,19 +61,14 @@ import { format } from "upath";
 
 export default [
     {
-        input: "./src/index.ts",
-        output: [
-            {
-                file: "dist/index.js",
-                sourcemap: true,
-                format: "cjs",
-            },
-            {
-                file: "dist/index.es.js",
-                sourcemap: true,
-                format: "esm",
-            },
-        ],
+        input: "src/index.ts",
+        output: {
+            dir: "lib",
+            format: "es",
+            preserveModules: true,
+            preserveModulesRoot: "src",
+            sourcemap: true,
+        },
 
         plugins: [
             babel({
@@ -88,14 +82,16 @@ export default [
             }),
             terser(),
             scss({
-                exclude: ["node_modules/**", "dist/**"],
+                exclude: ["node_modules/**"],
                 failOnError: true,
                 runtime: sass,
                 sourceMap: true,
-                output: "dist/index.css",
+                output: "lib/index.css",
             }),
             typescript({
                 tsconfig: "./tsconfig.base.json",
+                declaration: true,
+                declarationDir: "lib",
             }),
         ],
         external: ["react", "react-dom"],

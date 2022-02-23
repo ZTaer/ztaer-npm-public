@@ -1,0 +1,1 @@
+{"version":3,"file":"hello-word.component.js","sources":["../../../src/components/hello-word/hello-word.component.tsx"],"sourcesContent":[null],"names":["HelloWord","props","_a","value","React","className","HelloWordOther"],"mappings":"wEAKMA,EAAY,SAACC,GACP,IAAAC,EAAwBD,QAAxBE,aAAQ,cAEhB,OACIC,uBAAKC,UAAU,cACXD,0BAAKD,GACLC,gBAACE"}

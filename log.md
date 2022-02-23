@@ -51,8 +51,6 @@
     p) 23:29 - 检测发布结果
 </pre>
 
-
-
 <pre>
 # TODO: 2022.02.22 | Rollup 优化脚手架 - 实验二 ( 实验中... )
     a) 参考项目:
@@ -75,4 +73,8 @@
         2. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
         3. 兼容storybook安装: yarn add eslint-plugin-storybook -D
     f) husky + lint-staged - 保证git保存时进行校验代码
+</pre>
+
+<pre>
+
 </pre>

@@ -14,11 +14,8 @@
         "esModuleInterop": true,
         "baseUrl": "src/",
         "paths": {
-            "common/*": ["common/*"],
             "components/*": ["components/*"],
-            "hooks/*": ["hooks/*"],
-            "utils/*": ["utils/*"],
-            "styles/*": ["styles/*"]
+            "utils/*": ["utils/*"]
         }
     },
     "exclude": [
