@@ -86,22 +86,74 @@
         2. typings: 包含组件类型: -> "lib/index.d.ts",
         4. unpkg: ( 等待补充 ) "dist/index.js",
         <p>
-        {
-            "main": "dist/index.js",
-            "module": "lib/index.js",
-            "unpkg": "dist/index.js",
-            "typings": "lib/index.d.ts",
-            "outputDir": "./dist",
-            "files": [
-                "dist",
-                "lib"
-            ],
+            {
+                "main": "dist/index.js",
+                "module": "lib/index.js",
+                "unpkg": "dist/index.js",
+                "typings": "lib/index.d.ts",
+                "outputDir": "./dist",
+                "files": [
+                    "dist",
+                    "lib"
+                ],
 
-        }
+            }
         <p>
 
 </pre>
 
 <pre>
+# TODO: 2022.02.24 ( 等待笔记 )
+    a) Rollup 搭建Npm发布脚手架汇总
+        0. 基本文件结构配置
+        1. storybook相关配置
+        2. rollup搭建脚手架基本配置
+        3. rollup脚手架优化相关
+            a) .npmignore - 决定哪些文件发布到npm
+                0. 用法: 与.gitignore类似
+            b) css/scss - 正常使用
+                0. 基本安装: yarn add css-loader postcss rollup-plugin-postcss -D
+                1. scss安装: yarn add rollup-plugin-scss sass
+                2. 兼容storybook使用scss: yarn add -D @storybook/preset-scss css-loader@5.2.6 sass sass-loader@10.1.1 style-loader@2.0.0
+                    a) 需配置: /.storybook/main.js
+                    b) 需配置: rollup.config.js
+            c) typescript - 正常使用
+                0. 基本安装: yarn add typescript @rollup/plugin-typescript @typescript-eslint/parser -D
+                1. 需配置: rollup.config.js
+            d) eslint - 正常使用
+                0. 基本安装: yarn add eslint eslint-config-airbnb eslint-loader eslint-plugin-import eslint-plugin-jsx-a11y -D
+                1. 兼容react安装: yarn add eslint-plugin-react eslint-plugin-react-hooks -D
+                2. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
+                3. 兼容storybook安装: yarn add eslint-plugin-storybook -D
+            f) prettier - 正常使用
+            g) husky + lint-staged - 保证git保存时进行校验代码
+            h) 区分生产环境/开发环境相关
+        4. package.json与rollup配置相关
+            g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
+                0. 多文件输出: 要考虑ts编译输出,如index.d.ts
+                1. 单文件输出: 无需考虑ts编译输出
+                2. css文件要单独抽离
+                3. 注意: 生成文件夹相关 
+                    a) "dist": 单文件输出
+                    b) "lib": 多文件输出
+            h) package.json配置项相关解析
+                0. main: 指定cjs单核心文件 -> "dist/index.js"
+                1. module: 指定es多核心文件 -> "lib/index.js"
+                2. typings: 包含组件类型: -> "lib/index.d.ts",
+                4. unpkg: ( 等待补充 ) "dist/index.js",
+                <p>
+                    {
+                        "main": "dist/index.js",
+                        "module": "lib/index.js",
+                        "unpkg": "dist/index.js",
+                        "typings": "lib/index.d.ts",
+                        "outputDir": "./dist",
+                        "files": [
+                            "dist",
+                            "lib"
+                        ],
+
+                    }
+    b) 发布Npm包
 
 </pre>

@@ -77,8 +77,9 @@
     "scripts": {
         "start": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "build": "node_modules/.bin/rollup -c ./rollup.config.js",
-        "build-es": "node_modules/.bin/rollup -c ./scripts/rollup.es-config.js",
+        "build-prod": "yarn clear && node_modules/.bin/rollup -c ./scripts/rollup.config.prod.js && node_modules/.bin/rollup -c ./scripts/rollup.es-config.prod.js",
+        "build-dev": "yarn clear && node_modules/.bin/rollup -c ./scripts/rollup.config.dev.js && node_modules/.bin/rollup -c ./scripts/rollup.es-config.dev.js",
+        "clear": "node ./scripts/clear.script.js",
         "lint": "eslint src/**/*.ts src/**/*.tsx *.js --ignore-path .gitignore --fix",
         "prettier": "pretty-quick --staged"
     },

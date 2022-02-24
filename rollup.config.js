@@ -6,7 +6,6 @@ import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import scss from "rollup-plugin-scss";
 import sass from "sass";
-import { format } from "upath";
 
 /**
  * rollup主要配置( 等待笔记 )
