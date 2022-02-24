@@ -128,7 +128,25 @@
             f) prettier - 正常使用
             g) husky + lint-staged - 保证git保存时进行校验代码
             h) 区分生产环境/开发环境相关
-                0. 需要ES5逻辑加工配合
+                0. 保证rollup.config.js正常
+                1. 在基于原始文件"rollup.config.js"去配置"scripts/rollup.xxx.js"进行定制化配置
+                2. 部分配置需要ES5加工逻辑
+                    a) plugins融合方法: 参考"scripts/rollup.es-config.dev.js"
+                        0. 融合要求 --> 新配置会融合老配置,发生冲突时,会以新配置为主 
+                        1. 融合原理 --> 参考"scripts/utils.script.js"
+                3. 配置package.json
+                    a) 目的: 清除旧文件,根据环境rollup配置生成新文件
+                    b) 清除文件: 用node语法
+                        <p>
+                            {
+                                "scripts": {
+                                    "build-prod": "yarn clear && node_modules/.bin/rollup -c ./scripts/rollup.config.prod.js && node_modules/.bin/rollup -c ./scripts/rollup.es-config.prod.js",
+                                    "build-dev": "yarn clear && node_modules/.bin/rollup -c ./scripts/rollup.config.dev.js && node_modules/.bin/rollup -c ./scripts/rollup.es-config.dev.js",
+                                    "build-publish": "yarn build-prod && npm publish",
+                                    "clear": "node ./scripts/clear.script.js",
+                                }
+                            }
+                        </p>
         4. package.json与rollup配置相关
             g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
                 0. 多文件输出: 要考虑ts编译输出,如index.d.ts
