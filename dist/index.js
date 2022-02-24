@@ -1,2 +1,1 @@
 "use strict";function e(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("react")),l=function(){return t.default.createElement("div",null,"HelloWordOther")};exports.HelloWord=function(e){var r=e.value,u=void 0===r?"HelloWord":r;return t.default.createElement("div",{className:"hello-word"},t.default.createElement("h1",null,u),t.default.createElement(l,null))};
-//# sourceMappingURL=index.js.map

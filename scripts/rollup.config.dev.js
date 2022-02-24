@@ -1,15 +1,14 @@
-import babel from "rollup-plugin-babel";
-import resolve from "@rollup/plugin-node-resolve";
-import external from "rollup-plugin-peer-deps-external";
-import { terser } from "rollup-plugin-terser";
 import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
+import DefaultConfig from "../rollup.config";
 import scss from "rollup-plugin-scss";
 import sass from "sass";
+import { handleUtilsCoverPlugins } from "./utils.script";
+
+const { plugins = [] } = DefaultConfig[0];
 
 export default [
     {
-        input: "./src/index.ts",
+        ...DefaultConfig[0],
         output: [
             {
                 file: "dist/index.js",
@@ -22,30 +21,21 @@ export default [
                 format: "esm",
             },
         ],
-
-        plugins: [
-            babel({
-                exclude: "node_modules/**",
-                presets: ["@babel/preset-react"],
-            }),
-            external(),
-            resolve(),
-            commonjs({
-                defaultIsModuleExports: "auto",
-            }),
-            terser(),
-            scss({
-                exclude: ["node_modules/**", "dist/**"],
-                failOnError: true,
-                runtime: sass,
-                sourceMap: true,
-                output: "dist/index.css",
-                outputStyle: "expanded",
-            }),
-            typescript({
-                tsconfig: "./tsconfig.base.json",
-            }),
-        ],
-        external: ["react", "react-dom"],
+        plugins: handleUtilsCoverPlugins({
+            oldPlugins: plugins,
+            newPlugins: [
+                scss({
+                    exclude: ["node_modules/**", "dist/**"],
+                    failOnError: true,
+                    runtime: sass,
+                    sourceMap: true,
+                    output: "dist/index.css",
+                    outputStyle: "expanded",
+                }),
+                typescript({
+                    tsconfig: "./tsconfig.base.json",
+                }),
+            ],
+        }),
     },
 ];

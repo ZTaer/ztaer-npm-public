@@ -128,6 +128,7 @@
             f) prettier - 正常使用
             g) husky + lint-staged - 保证git保存时进行校验代码
             h) 区分生产环境/开发环境相关
+                0. 需要ES5逻辑加工配合
         4. package.json与rollup配置相关
             g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
                 0. 多文件输出: 要考虑ts编译输出,如index.d.ts
@@ -154,6 +155,7 @@
                         ],
 
                     }
+                </p>
     b) 发布Npm包
 
 </pre>

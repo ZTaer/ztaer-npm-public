@@ -61,20 +61,19 @@ import sass from "sass";
 
 export default [
     {
-        input: "./src/index.ts",
+        input: "src/index.ts",
         output: [
             {
                 file: "dist/index.js",
-                sourcemap: true,
+                sourcemap: false,
                 format: "cjs",
             },
             {
                 file: "dist/index.es.js",
-                sourcemap: true,
+                sourcemap: false,
                 format: "esm",
             },
         ],
-
         plugins: [
             babel({
                 exclude: "node_modules/**",
@@ -90,8 +89,9 @@ export default [
                 exclude: ["node_modules/**", "dist/**"],
                 failOnError: true,
                 runtime: sass,
-                sourceMap: true,
+                sourceMap: false,
                 output: "dist/index.css",
+                outputStyle: "compressed",
             }),
             typescript({
                 tsconfig: "./tsconfig.base.json",
