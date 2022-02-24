@@ -136,7 +136,6 @@
                         1. 融合原理 --> 参考"scripts/utils.script.js"
                 3. 配置package.json
                     a) 目的: 清除旧文件,根据环境rollup配置生成新文件
-                    b) 清除文件: 用node语法
                         <p>
                             {
                                 "scripts": {
@@ -147,6 +146,8 @@
                                 }
                             }
                         </p>
+                    b) 清除文件: 用node语法
+                        0. 参考: "scripts/clear.script.js"
         4. package.json与rollup配置相关
             g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
                 0. 多文件输出: 要考虑ts编译输出,如index.d.ts
