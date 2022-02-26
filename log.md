@@ -618,7 +618,17 @@
 					"module": "dist/index.es.js"
 				}
 			<p>
-    	4. 发布包:
+		4. .npmignore: ( 新建文件 )
+			a) 目的: 指定不发布到npm的文件/文件夹
+			<p>
+				storybook/*
+				src/*
+				scripts/*
+				log.md
+				rollup.config.js
+				yarn.lock
+			</p>
+    	5. 发布包:
 			a) 命令: npm publish
-    	5. 检测发布结果: npm 直接搜索包名
+    	6. 检测发布结果: npm 直接搜索包名
 </pre>
