@@ -1,8 +1,8 @@
-/.storybook
-/src
-/scripts
-/storybook-static
-/node_modules
+.storybook
+src
+scripts
+storybook-static
+node_modules
 
 log.md
 rollup.config.js
