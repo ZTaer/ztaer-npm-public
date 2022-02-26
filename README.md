@@ -1,4 +1,4 @@
-# Npm 发布实验 | Rollup 搭建脚手架实验
+# Npm 发布实验 | Rollup 搭建脚手架实验 ( Rollup+Storybook+Typescript+Scss+Eslint+Prettier+Husky+LintStaged )
 
 # 详细搭建日志参考: ./lod.md
 
