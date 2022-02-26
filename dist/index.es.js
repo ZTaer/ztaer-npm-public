@@ -1,0 +1,1 @@
+import e from"react";var l=function(){return e.createElement("div",null,"HelloWordOther")},r=function(r){return r=r.value,e.createElement("div",{className:"hello-word"},e.createElement("h1",null,void 0===r?"HelloWord":r),e.createElement(l,null))};export{r as HelloWord};
