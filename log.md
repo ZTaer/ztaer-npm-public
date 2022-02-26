@@ -126,6 +126,7 @@
                 2. 兼容ts安装: yarn add @typescript-eslint/eslint-plugin eslint-config-airbnb-typescript eslint-import-resolver-typescript -D
                 3. 兼容storybook安装: yarn add eslint-plugin-storybook -D
             f) prettier - 正常使用
+                0. 基本安装: yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
             g) husky + lint-staged - 保证git保存时进行校验代码
             h) 区分生产环境/开发环境相关
                 0. 保证rollup.config.js正常
@@ -149,14 +150,14 @@
                     b) 清除文件: 用node语法
                         0. 参考: "scripts/clear.script.js"
         4. package.json与rollup配置相关
-            g) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
+            a) 多文件输出/单文件输出,配合ts编译输出 ( 注意事项 )
                 0. 多文件输出: 要考虑ts编译输出,如index.d.ts
                 1. 单文件输出: 无需考虑ts编译输出
                 2. css文件要单独抽离
                 3. 注意: 生成文件夹相关 
                     a) "dist": 单文件输出
                     b) "lib": 多文件输出
-            h) package.json配置项相关解析
+            b) package.json配置项相关解析
                 0. main: 指定cjs单核心文件 -> "dist/index.js"
                 1. module: 指定es多核心文件 -> "lib/index.js"
                 2. typings: 包含组件类型: -> "lib/index.d.ts",

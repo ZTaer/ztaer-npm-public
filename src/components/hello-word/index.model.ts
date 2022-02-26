@@ -1,4 +1,4 @@
-export interface MainProps{
-  value?: string;
-  [keyName:string]: any;
+export interface MainProps {
+	value?: string;
+	[keyName: string]: any;
 }
