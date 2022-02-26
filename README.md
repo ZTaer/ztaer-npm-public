@@ -1,4 +1,4 @@
-# Npm 发布实验 | Rollup 搭建脚手架实验 ( Rollup+Storybook+Typescript+Scss+Eslint+Prettier+Husky+LintStaged )
+# Rollup 搭建脚手架: 此脚手架适合 Npm 包发布, 支持区分 cjs/es 双格式编译发布 ( Rollup+Storybook+Typescript+Scss+Babel+Eslint+Prettier+Husky+LintStaged )
 
 # 详细搭建日志参考: ./lod.md
 
