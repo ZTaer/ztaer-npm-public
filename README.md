@@ -328,6 +328,9 @@
 					g) commonjs
 						0. 依赖: "@rollup/plugin-commonjs"
 						1. 目的: 配合resolve 
+					h) uglify
+						0. 依赖: "rollup-plugin-uglify"
+						1. 目的: es5压缩代码,生产环境时使用
 				5. external - 打包时需要剔除的库
 				<p>
 					import babel from "rollup-plugin-babel";

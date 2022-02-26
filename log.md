@@ -503,13 +503,17 @@
 						1. 目的: 排除第三方依赖库打包相关( 如react,react-dom,防止引入库使用时产生冲突 )
 					e) terser
 						0. 依赖: "rollup-plugin-terser"
-						1. 目的: 压缩文件
+						1. 目的: es6压缩文件
 					f) typescript
 						0. 依赖: "@rollup/plugin-typescript"
 						1. 目的: ts语法编译 
 					g) commonjs
 						0. 依赖: "@rollup/plugin-commonjs"
 						1. 目的: 配合resolve 
+					h) uglify
+						0. 依赖: "rollup-plugin-uglify"
+						1. 目的: es5压缩代码,生产环境时使用
+
 				5. external - 打包时需要剔除的库
 				<p>
 					import babel from "rollup-plugin-babel";

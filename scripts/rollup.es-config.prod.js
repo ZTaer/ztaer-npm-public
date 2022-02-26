@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import scss from 'rollup-plugin-scss';
 import sass from 'sass';
 import DefaultConfig from '../rollup.config';
+import { uglify } from 'rollup-plugin-uglify';
 const { handleUtilsCoverPlugins } = require('./utils.script');
 
 const { plugins = [] } = DefaultConfig[0];
@@ -32,6 +33,7 @@ export default [
 					declaration: true,
 					declarationDir: 'lib',
 				}),
+				uglify(),
 			],
 		}),
 
