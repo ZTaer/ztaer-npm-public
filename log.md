@@ -456,11 +456,14 @@
 				1. 其他文件参考: https://github.com/ZTaer/ztaer-npm-public/tree/main/scripts
 				2. input - 主编译文件
 				3. output - 输出文件
-					a) 详细文档:
+					a) 详细文档: https://www.rollupjs.org/guide/zh/#%E6%A0%BC%E5%BC%8Fformat--f--outputformat
 					b) 关于输出文件格式(format)区分
-						0. cjs
-						1. es/esm
-						2. 
+						0. amd – 异步模块定义，用于像RequireJS这样的模块加载器
+						1. cjs – CommonJS，适用于 Node 和 Browserify/Webpack
+						2. esm – 将软件包保存为 ES 模块文件，在现代浏览器中可以通过"<script type=module ><>"标签引入
+						3. iife – 一个自动执行的功能，适合作为"<script><>"标签. (如果要为应用程序创建一个捆绑包，您可能想要使用它，因为它会使文件大小变小。)
+						4. umd – 通用模块定义，以amd，cjs 和 iife 为一体
+						5. system - SystemJS 加载器格式0. cjs
 					<p>
 						output: [
 									{
