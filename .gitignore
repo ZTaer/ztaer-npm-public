@@ -1,6 +1,18 @@
+build
 /build
+**/build
+build/*
+
+storybook-static
 /storybook-static
+**/storybook-static
+storybook-static/*
+
+node_modules
 /node_modules
+**/node_modules
+node_modules/*
+
 
 .DS_STORE
 .idea
