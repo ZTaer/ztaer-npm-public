@@ -1,6 +1,6 @@
 # Rollup 搭建脚手架: 此脚手架适合 Npm 包发布, 支持区分 cjs/es 双格式编译发布
 
-# 主要依赖: Rollup+Storybook+Typescript+Scss+Babel+Eslint+Prettier+Husky+LintStaged
+# 主要依赖: Rollup + Storybook + Typescript + Scss + Babel + Eslint + Prettier + Husky + LintStaged
 
 # 详细搭建日志参考: ./lod.md ( https://github.com/ZTaer/ztaer-npm-public/blob/main/log.md )
 
